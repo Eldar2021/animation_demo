@@ -44,7 +44,7 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   bool isFullSun = true;
   bool isDayMood = true;
-  Duration duration = const Duration(seconds: 1);
+  Duration duration = const Duration(seconds: 3);
 
   Future<void> changeMode(int value) async {
     if (value == 0) {
@@ -98,7 +98,7 @@ class _BodyState extends State<Body> {
           AnimatedPositioned(
             left: 0,
             right: 0,
-            bottom: isFullSun ? -10 : -120,
+            bottom: isFullSun ? 400 : -150,
             duration: duration,
             child: SvgPicture.asset('assets/icons/Sun.svg'),
           ),
